@@ -1,0 +1,73 @@
+From: Ross Campbell <rcampbel@us.oracle.com>
+To: mikebabcock@pobox.com
+Subject: logcolorise.pl & Solaris additions
+
+I like your script a lot. I'm an admin for a number of different
+UNIX platforms, so maybe I can provide some helpful info. Can you add
+some extra words and phrases to highlight? Also, can you version your
+download file so that people can tell what version they're getting?
+
+NOTE: If I get some time, I'll try to hack some more in and give you
+back a modified script, but just thought I'd throw these out to start
+with.
+
+here's some sample messages entries from  SPARC SOLARIS and what I'd
+like to be highlighted:
+
+
+Sun GBIC RESETS
+ID[SUNWssa.socal.link.5010] socal0: port 0: Fibre Channel is OFFLINE
+
+Aug 18 23:16:26 xxxx80 unix:[]: ID[SUNWssa.socal.link.6010] socal0: port 0: Fibre Channel Loop is ONLINE
+
+     --- "Fibre Channel is OFFLINE" and "Fibre Channel Loop is ONLINE"
+should be highlited. These are *CRITICAL*!
+
+
+Clearcase errors:
+
+Aug 18 23:07:23 xxxx80 unix:[ ]: mvfs: ERROR: view=xxx_xxx_1 vob=/xxx/xxx - ClearCase view error
+    --- "ERROR" and "ClearCase view error" should be highlited
+
+transmit errors:
+
+Aug 18 23:11:25 xxxx80 unix:[ ]: sf0:  Lost Frame? (read) got 0x0 expected 0x2000 al_pa 0xc9
+    --- highlight "Lost Frame?"
+
+SCSI errors
+
+Aug 18 23:11:25 xxxx80 unix:[0]: WARNING: /sbus@2,0/SUNW,socal@d,10000/sf@0,0/ssd@w21000020370cca83,0 (ssd15):
+Aug 18 23:11:25 xxxx80 unix:[1]:       SCSI transport failed: reason 'incomplete': retrying command
+
+--- highlight "WARNING" and "SCSI transport failed", maybe more of a
+warning. under reason, could say 'incomplete' or 'timeout' or 'reset'
+
+Aug 19 02:06:26 xxxx80 unix:[]:       Error for Command:
+read(10)                Error Level: Fatal
+Aug 19 02:06:26 xxxxx80 unix:[]:       Requested Block:
+16552199                  Error Block: 16628753
+Aug 19 02:06:26 xxxxx80 unix:[]:       Vendor:
+SEAGATE                            Serial Number: 9806R13194
+Aug 19 02:06:26 xxxxx80 unix:[]:       Sense Key: Hardware Error
+Aug 19 02:06:26 xxxxx80 unix:[]:       ASC: 0x15 (<vendor unique code
+0x15>), ASCQ: 0x1, FRU: 0x1
+Aug 19 02:06:26 xxxxx80 unix:[]: WARNING: vxvm:vxio: Plex 500m_145-01
+block 11920:
+Aug 19 02:06:26 xxxxx80 unix:[]:       Uncorrectable read error on
+Subdisk c1t22d0-145 block 1280
+
+-- highlight "Error Level:" and "Fatal","Hardware Error", and
+U"ncorrectable read error"
+Note: Error Level can be followed by Retryable or Fatal.
+
+
+Full disk
+
+Aug 18 23:33:31 xxxx80 unix:[ ]: NOTICE: realloccg /private: file system
+full
+-- highlight "NOTICE" and "file system full"
+
+------------------------        "The web is everywhere -  and always on;
+Ross Campbell                    Services, not products, are key;
+Systems Administrator            This is a post-PC, postproprietary era."
+Oracle Corporation                  - Ed Zander, COO Sun Microsystems

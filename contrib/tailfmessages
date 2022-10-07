@@ -1,0 +1,8 @@
+#!/bin/sh
+# TAILFMESSAGES - Copyright (C) 1999 Michael T. Babcock
+# GPL version 2.0 or newer
+#
+# Meant to be run from a terminal with a command like:
+# Eterm --menubar 0 --name /var/log/messages --trans --exec tailfmessages
+#
+/usr/bin/tail -n 30 -f /var/log/messages | logcolorise.pl

@@ -1,0 +1,33 @@
+1.0.8: Bugfix for line 84; rec[4] instead of rec[6]
+
+1.0.7: Added the contrib directory
+       Fixed a "bug" in the final print statement
+
+1.0.6: Added several new highlight terms (see source).
+       Added daemons / terms specified by Ross Campbell for Solaris.
+       Got rid of the associative array as per marc@zounds.intertex.net's suggestion.
+
+1.0.5: Fixed a bug that would cause the date to disappear when moving from one to
+            two digit dates in the log.
+
+1.0.4: Added a couple extra terms to the parsing list.
+       Fixed a bug that made logcolorise ignorethe first and last words in the list.
+       Changed the code layout a little in preparation for the next major release.
+
+1.0.3: Added some more terms (PAM and SSH failures and notes).
+       Word lists for context highlighting are now in arrays making for
+            easier maintenance (see next).
+       All the user-changeable options are now right underneath the
+            colour definitions in the file.  Feel free to send me an E-mail
+            with any useful terms I've forgotten to note.
+
+1.0.2: Changed input method to support more options (such as tail -f)
+       Added basic colour configuration to near-beginning of file.
+       Changed executable to logcolorise.pl ... please don't criticise
+            my Canadian-ness, just rename it if it pleases you.
+
+1.0.1: Removed references to as of yet unused variables
+       Added some intelligent parsing of dates with an extra space
+
+1.0.0: First release
+

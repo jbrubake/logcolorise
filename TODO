@@ -1,0 +1,1 @@
+Would like to either migrate this to C and work with nested term searches or start a configuration file with regular expression lists associated with colours.  We would just compare the line to the regex and colour it if necessary.  This is an aweful log more complicated for non-regex people, but if most of the basic ones are included, it would be more powerful.
